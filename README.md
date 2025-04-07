@@ -4,7 +4,7 @@ A lightweight MCP server that searches and retrieves relevant documentation cont
 
 This project allows Language Models to query and fetch up-to-date documentation content dynamically, acting as a bridge between LLMs and external doc sources.
 
-## Model Context Protocol
+## Model Context Protocol (MCP)
 The Model Context Protocol is an open standard that enables developers to build secure, two-way connections between their data sources and AI-powered tools. The architecture is straightforward: developers can either expose their data through MCP servers or build AI applications (MCP clients) that connect to these servers.
 
  ### LLMs in Isolation
