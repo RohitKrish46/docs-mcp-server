@@ -147,7 +147,7 @@ Use it to query docs in real time:
 ![MCP_tool_working](https://github.com/user-attachments/assets/5790241b-d94f-4fd9-ad26-cafd30933ca9)
 
 
-![Result](https://github.com/user-attachments/assets/65f4e0ce-0e99-4646-b029-464b3438839e)
+![Working_MCP](https://github.com/user-attachments/assets/0d732017-52c4-41c5-8275-0a4c6f335609)
 
 
 ## 🧰 Supported Libraries / Docs
