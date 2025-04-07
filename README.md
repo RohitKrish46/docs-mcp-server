@@ -1,7 +1,54 @@
 # 📚 MCP Docs Search Server
+
 A lightweight MCP server that searches and retrieves relevant documentation content from popular AI libraries like LangChain, LlamaIndex, and OpenAI using a combination of web search and content parsing.
 
 This project allows Language Models to query and fetch up-to-date documentation content dynamically, acting as a bridge between LLMs and external doc sources.
+
+## Model Context Protocol
+The Model Context Protocol is an open standard that enables developers to build secure, two-way connections between their data sources and AI-powered tools. The architecture is straightforward: developers can either expose their data through MCP servers or build AI applications (MCP clients) that connect to these servers.
+
+ ### LLMs in Isolation
+
+> LLMs alone are limited — their true potential is unlocked when integrated with tools and services via frameworks like MCP.
+
+
+![LLM_on_its_own](https://github.com/user-attachments/assets/a27664b7-ab6f-41e8-ad2e-08d710fa12f7)
+
+1.  LLMs without tools, LLMs are static and have limited utility.
+
+2. With tools, they become interactive, but orchestration can be messy.
+
+3. With MCP, LLMs gain a scalable, plug-and-play interface to real-world services, making them much more practical and powerful in production environments.
+
+
+### MCP Ecosystem
+
+
+The MCP Server acts as the translator/interface between LLMs and services.
+
+> MCP (Modular Capability Provider) standardizes how LLMs interact with external tools/services — promoting interoperability, modularity, and cleaner interfaces.
+
+
+![MCP_ecosystem](https://github.com/user-attachments/assets/f493ccd3-6746-49a3-9b1a-7ef13d8fa45b)
+
+
+
+This structure decentralizes responsibility:
+
+1. Tool providers build and maintain their own MCP Server implementation.
+
+2. LLMs just need to speak the MCP protocol.
+
+![MCP](https://github.com/user-attachments/assets/1046aca4-c86d-4664-ac03-868bd4b9a5bf)
+
+
+**Purpose and Vision:**
+
+- Standardize communication between LLMs and external tools
+
+- Avoid bespoke integrations
+
+- Encourage a scalable ecosystem of services (like a plugin architecture)
 
 
 ## 🚀 Features
@@ -14,7 +61,6 @@ Parses HTML content using BeautifulSoup to extract clean, human-readable text—
 
 🤖 Seamless LLM Tooling
 Exposes a structured get_docs tool that can be used within LLM agents (e.g., Claude, GPT) to query specific libraries in real time.
-
 
 
 ## 🛠️Tool
@@ -34,7 +80,7 @@ library: One of langchain, llama-index, or openai.
 3. 🧠 Sends the result back to the LLM for further reasoning and responses
 
 
-📦 Setup
+## 📦 Setup
 
 1. Clone the repository
 ```
@@ -60,8 +106,8 @@ uv pip install beautifulsoup4
 ```
 SERPER_API_KEY=your_serper_api_key
 ```
+
 ## 🧩 Claude Desktop Integration
-4. Integrate with Claude Desktop
 
 To integrate this server as a tool within Claude Desktop:
 
@@ -104,7 +150,7 @@ Use it to query docs in real time:
 ![Result](https://github.com/user-attachments/assets/65f4e0ce-0e99-4646-b029-464b3438839e)
 
 
-## 📚 Supported Libraries
+## 🧰 Supported Libraries
 
 ![LangChain](https://img.shields.io/badge/LangChain-000000?style=for-the-badge&logo=chainlink&logoColor=white)
 
