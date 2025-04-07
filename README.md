@@ -150,6 +150,22 @@ Use it to query docs in real time:
 ![Working_MCP](https://github.com/user-attachments/assets/0d732017-52c4-41c5-8275-0a4c6f335609)
 
 
+
+## 🪲Debugging in Real Time
+
+One can also debug the tool that we created using the following command.
+
+> Remember to install [NodeJs18+](https://nodejs.org/en/download)
+
+```
+npx @modelcontextprotocol/inspector uv run main.py
+```
+and follow to the port where the connection is setup.
+
+![image](https://github.com/user-attachments/assets/965771df-3d1c-4f05-87e4-996e5a154d17)
+
+
+
 ## 🧰 Supported Libraries / Docs
 
 ![LangChain](https://img.shields.io/badge/LangChain-000000?style=for-the-badge&logo=chainlink&logoColor=white)
