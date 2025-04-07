@@ -10,3 +10,4 @@ wheels/
 .venv
 # envoirnment variables
 .env
+/images/
