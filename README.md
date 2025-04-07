@@ -150,7 +150,7 @@ Use it to query docs in real time:
 ![Result](https://github.com/user-attachments/assets/65f4e0ce-0e99-4646-b029-464b3438839e)
 
 
-## 🧰 Supported Libraries
+## 🧰 Supported Libraries / Docs
 
 ![LangChain](https://img.shields.io/badge/LangChain-000000?style=for-the-badge&logo=chainlink&logoColor=white)
 
