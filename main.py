@@ -38,7 +38,6 @@ async def search_web(query:str) -> dict | None:
         except httpx.TimeoutException:
             return {"organic": []}
 
-
 # fetch the content of a URL
 async def fetch_url(url: str):
     async with httpx.AsyncClient() as client:
@@ -51,7 +50,7 @@ async def fetch_url(url: str):
             return "Timeout error"
 
 @mcp.tool()
-def get_docs(query: str, library: str):
+async def get_docs(query: str, library: str):
     """
     Search the docs for a given query and library,
     Supports langchain, llama-index, and openai.
@@ -61,12 +60,42 @@ def get_docs(query: str, library: str):
         library (str): The library to search in.
 
     Returns:
-        List of dictionaries containing source URLs and extracted text
+        Text from the documentation.
     """
+    if library not in docs_urls:
+        raise ValueError(f"Library {library} not supported by this tool")
+    query = f"site:{docs_urls[library]} {query}"
+    results = await search_web(query)
+    if len(results["organic"] == 0):
+        return "No results found"
     
+    test_text = """
+Chroma
+    This notebook covers how to get started with the Chroma vector store.
+
+    Chroma is a AI-native open-source vector database focused on developer productivity and happiness. Chroma is licensed under Apache 2.0. View the full docs of Chroma at this page, and find the API reference for the LangChain integration at this page.
+
+    Setup
+    To access Chroma vector stores you'll need to install the langchain-chroma integration package.
+
+    pip install -qU "langchain-chroma>=0.1.2"
+
+    Credentials
+    You can use the Chroma vector store without any credentials, simply installing the package above is enough!
+
+    If you want to get best in-class automated tracing of your model calls you can also set your LangSmith API key by uncommenting below:
+
+    # os.environ["LANGSMITH_API_KEY"] = getpass.getpass("Enter your LangSmith API key: ")
+    # os.environ["LANGSMITH_TRACING"] = "true"
+"""
+    text = ""
+    for result in results["organic"]:
+        text += await fetch_url(result["link"])
+    return text
+
 def main():
     print("Hello from documentation!")
 
 
 if __name__ == "__main__":
-    main()
+    mcp.run(transport="stdio")
