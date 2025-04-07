@@ -3,7 +3,9 @@ from dotenv import load_dotenv
 import httpx
 import json
 import os
-
+from bs4 import BeautifulSoup
+import warnings
+warnings.filterwarnings("ignore")
 load_dotenv()
 
 mcp = FastMCP("docs")
@@ -66,7 +68,7 @@ async def get_docs(query: str, library: str):
         raise ValueError(f"Library {library} not supported by this tool")
     query = f"site:{docs_urls[library]} {query}"
     results = await search_web(query)
-    if len(results["organic"] == 0):
+    if len(results["organic"]) == 0:
         return "No results found"
     
     test_text = """
@@ -91,7 +93,7 @@ Chroma
     text = ""
     for result in results["organic"]:
         text += await fetch_url(result["link"])
-    return text
+    return test_text
 
 def main():
     print("Hello from documentation!")
