@@ -11,5 +11,5 @@ wheels/
 # envoirnment variables
 .env
 /images/
-/uv.lock
+uv.lock
 
