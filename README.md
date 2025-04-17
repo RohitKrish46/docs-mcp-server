@@ -169,9 +169,7 @@ and follow to the port where the connection is setup.
 ## 🧰 Supported Libraries / Docs
 
 ![LangChain](https://img.shields.io/badge/LangChain-000000?style=for-the-badge&logo=chainlink&logoColor=white)
-
 ![LlamaIndex](https://img.shields.io/badge/LlamaIndex-8E44AD?style=for-the-badge&logo=llama&logoColor=white)
-
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 
 More libraries can be easily added by updating the docs_urls dictionary.
