@@ -59,7 +59,7 @@ Uses the Serper API to query Google and retrieve the top documentation pages rel
 
 **Clean Content Extraction**
 
-Parses HTML content using BeautifulSoup to extract clean, human-readable text—stripping away unnecessary tags, ads, or navigation content.
+Parses HTML content using BeautifulSoup to extract clean, human readable text stripping away unnecessary tags, ads, or navigation content.
 
 **Seamless LLM Tooling**
 
