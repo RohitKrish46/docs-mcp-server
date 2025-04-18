@@ -1,4 +1,4 @@
-# 📚 MCP Docs Search Server
+# MCP Docs Search Server
 
 A lightweight MCP server that searches and retrieves relevant documentation content from popular AI libraries like LangChain, LlamaIndex, and OpenAI using a combination of web search and content parsing.
 
@@ -53,13 +53,13 @@ This structure decentralizes responsibility:
 
 ## 🚀 Features
 
-🔍 Web Search Integration
+**Web Search Integration**
 Uses the Serper API to query Google and retrieve the top documentation pages related to a given search query.
 
-🧹 Clean Content Extraction
+**Clean Content Extraction**
 Parses HTML content using BeautifulSoup to extract clean, human-readable text—stripping away unnecessary tags, ads, or navigation content.
 
-🤖 Seamless LLM Tooling
+**Seamless LLM Tooling**
 Exposes a structured get_docs tool that can be used within LLM agents (e.g., Claude, GPT) to query specific libraries in real time.
 
 
@@ -75,12 +75,12 @@ query: The search term or phrase.
 library: One of langchain, llama-index, or openai.
 
 ### Workflow
-1. 🔍 Searches for relevant documentation pages
-2. 📄 Fetches and parses clean text content
-3. 🧠 Sends the result back to the LLM for further reasoning and responses
+1. Searches for relevant documentation pages
+2. Fetches and parses clean text content
+3. Sends the result back to the LLM for further reasoning and responses
 
 
-## 📦 Setup
+## Setup
 
 1. Clone the repository
 ```
@@ -107,7 +107,7 @@ uv pip install beautifulsoup4
 SERPER_API_KEY=your_serper_api_key
 ```
 
-## 🧩 Claude Desktop Integration
+## Claude Desktop Integration
 
 To integrate this server as a tool within Claude Desktop:
 
@@ -166,7 +166,7 @@ and follow to the port where the connection is setup.
 
 
 
-## 🧰 Supported Libraries / Docs
+## Supported Libraries / Docs
 
 ![LangChain](https://img.shields.io/badge/LangChain-000000?style=for-the-badge&logo=chainlink&logoColor=white)
 ![LlamaIndex](https://img.shields.io/badge/LlamaIndex-8E44AD?style=for-the-badge&logo=llama&logoColor=white)
@@ -177,10 +177,10 @@ More libraries can be easily added by updating the docs_urls dictionary.
 
 ## 🧠 Future Enhancements
 
-- ✅ Add support for additional libraries like HuggingFace, PyTorch, TensorFlow, etc.
+- Add support for additional libraries like HuggingFace, PyTorch, TensorFlow, etc.
 
-- ⚡ Implement caching to reduce redundant fetches and improve performance.
+- Implement caching to reduce redundant fetches and improve performance.
 
-- 📈 Introduce a scoring/ranking mechanism based on relevance or token quality.
+- Introduce a scoring/ranking mechanism based on relevance or token quality.
 
-- 🧪 Unit testing and better exception handling for production readiness.
+- Unit testing and better exception handling for production readiness.
