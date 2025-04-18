@@ -54,12 +54,15 @@ This structure decentralizes responsibility:
 ## 🚀 Features
 
 **Web Search Integration**
+
 Uses the Serper API to query Google and retrieve the top documentation pages related to a given search query.
 
 **Clean Content Extraction**
+
 Parses HTML content using BeautifulSoup to extract clean, human-readable text—stripping away unnecessary tags, ads, or navigation content.
 
 **Seamless LLM Tooling**
+
 Exposes a structured get_docs tool that can be used within LLM agents (e.g., Claude, GPT) to query specific libraries in real time.
 
 
