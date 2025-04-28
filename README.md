@@ -51,7 +51,7 @@ This structure decentralizes responsibility:
 - Encourage a scalable ecosystem of services (like a plugin architecture)
 
 
-## 🚀 Features
+## Features
 
 **Web Search Integration**
 
@@ -66,7 +66,7 @@ Parses HTML content using BeautifulSoup to extract clean, human readable text st
 Exposes a structured get_docs tool that can be used within LLM agents (e.g., Claude, GPT) to query specific libraries in real time.
 
 
-## 🛠️Tool
+## Tool
 
 `get_docs(query: str, library: str)`
 
@@ -154,7 +154,7 @@ Use it to query docs in real time:
 
 
 
-## 🪲Debugging in Real Time
+## Debugging in Real Time
 
 One can also debug the tool that we created using the following command.
 
@@ -178,7 +178,7 @@ and follow to the port where the connection is setup.
 More libraries can be easily added by updating the docs_urls dictionary.
 
 
-## 🧠 Future Enhancements
+## Future Enhancements
 
 - Add support for additional libraries like HuggingFace, PyTorch, TensorFlow, etc.
 
